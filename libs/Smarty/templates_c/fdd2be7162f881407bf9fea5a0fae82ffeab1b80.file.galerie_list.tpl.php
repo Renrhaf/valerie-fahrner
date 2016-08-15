@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2012-06-04 12:47:30
+<?php /* Smarty version Smarty-3.1.7, created on 2016-08-15 22:21:11
          compiled from "modules/Galerie/templates/galerie_list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8296601614fad71e06bbc87-32473508%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fdd2be7162f881407bf9fea5a0fae82ffeab1b80' => 
     array (
       0 => 'modules/Galerie/templates/galerie_list.tpl',
-      1 => 1338806715,
+      1 => 1471269492,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fad71e0775e8')) {function content_4fad71e0775e8($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/homepages/23/d369665974/htdocs/valerie/libs/Smarty/plugins/modifier.truncate.php';
+<?php if ($_valid && !is_callable('content_4fad71e0775e8')) {function content_4fad71e0775e8($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/var/www/valeriefahrner/libs/Smarty/plugins/modifier.truncate.php';
 ?><div id="site_path">
     <span class="path"><span class="pathS"></span><a class="pathB" href="">Accueil</a><span class="pathE"></span></span>
     <span class="path"><span class="pathSNF"></span><a class="pathB" href="galeries">Liste des galeries</a><span class="pathE"></span></span>
