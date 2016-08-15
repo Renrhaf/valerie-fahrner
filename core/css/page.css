@@ -1,0 +1,562 @@
+/** 
+ *   Feuille de style principale du site
+ *   Créée le : 5 sept. 2011, 14:02:53
+ *   Autheur : Quentin Fahrner
+ *   Description: Contient les règles de style des élements conteneurs
+
+mainWrapper
+    content
+        header
+        page
+        footer
+
+ */
+   
+body{
+    background-color:#42413F;    
+}
+
+article, aside, figure, footer, header, hgroup, menu, nav, section { display:block; }
+
+/* Bloc principal centré contenant tout le site */
+#mainWrapper{
+    width:1000px;
+    margin:20px auto 20px auto;
+    text-shadow: 0px 1px 1px #fff;
+    font-family: Tahoma, Geneva, Kalimati, sans-serif; 
+    color:#333333;
+}
+
+/* contenu du site */
+#content {
+   -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border:1px solid black;
+    background-color:#F5F5F5;
+}
+
+/* Bloc d'entête du site */
+#header{
+    text-align:center;
+    font-size:xx-large;
+    height:158px;
+    background:url('../images/logo.jpg') no-repeat top center;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Bloc de contenu de la page */
+#page{
+    clear:both;
+    position:relative;
+}
+
+/* Bloc de pied de page */
+#footer{
+    clear:both;
+    margin-top:20px;
+    font-size:0.8em;
+    text-align:center;
+    font-style:italic;
+    margin-bottom:4px;
+}
+
+/* Réseaux sociaux */
+#socials {
+    margin:4px;
+}
+
+/* CSS boutons home */
+#home{
+    position:absolute;
+    right:10px;
+    z-index:10;
+    width:16px;
+    height:16px;
+    text-indent: -9999px;
+}
+
+#home a{
+    display:block;
+    opacity:0.7;
+    margin-bottom:4px;
+}
+
+#home a:hover{
+    opacity:1;
+}
+
+#home .home-logout{
+    background:url('../images/icones/icones.png') no-repeat center;
+    background-position: -75px 0;
+    width: 16px;
+    height: 16px;
+}
+
+#home .home-login{
+    background:url('../images/icones/icones.png') no-repeat center;
+    background-position: -115px -19px ;
+    width: 16px;
+    height: 16px;
+}
+
+
+/* CSS menu */
+#menu {
+    border-top: 1px solid black;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#menu ul{
+    margin:0px;
+    padding:0px;
+}
+
+#menu li{
+    list-style:none;
+    display:block;
+    float:left;
+    line-height:43px;
+    margin:0 8px 0 8px;
+}
+
+#menu .menu_limit{
+    height:43px;
+    width:4px;
+    display:block;
+    margin:0px;
+    float:left;
+    padding:0px;
+}
+
+#menu .menuG{
+    background: url('../images/menu/menuG.png') no-repeat;
+}
+
+#menu .menuAG{
+    background: url('../images/menu/menuAG.png') no-repeat;
+}
+
+#menu a{
+    color:black;
+    text-decoration: none;
+    display:block;
+    padding:0 8px 0 8px;
+    float:left;
+    background: url('../images/menu/menu.png') repeat-x;
+}
+
+#menu .menuA{
+    color:#FFFFFF;
+    background: url('../images/menu/menuA.png') repeat-x;
+}
+
+#menu .menuD{
+    background: url('../images/menu/menuD.png') no-repeat;
+}
+
+#menu .menuAD{
+    background: url('../images/menu/menuAD.png') no-repeat;
+}
+
+#menu a:hover{
+    color:#F6AC00;
+    text-shadow: 0px 1px 1px #FFF;
+}
+/* fin CSS menu */
+
+
+/* CSS site path */
+#site_path{
+    margin-bottom:10px;
+}
+
+#site_path .path{
+    display:inline-block;
+    line-height:32px;
+    position:relative;
+    font-size: 12px;
+}
+
+#site_path .pathS{
+    background: url('../images/menu/pathS.png') no-repeat;
+    display:block;
+    float:left;
+    height:32px;
+    width:2px;
+}
+
+#site_path .pathSNF{
+    background: url('../images/menu/pathSNF.png') no-repeat;
+    display:block;
+    float:left;
+    height:32px;
+    width:16px;
+}
+
+#site_path .pathB{
+    background: url('../images/menu/path.png') repeat-x;
+    display:inline-block;
+    line-height:32px;
+    padding:0 4px 0 4px;
+}
+
+#site_path .pathE{
+    background: url('../images/menu/pathE.png') no-repeat;
+    display:block;
+    height:32px;
+    width:16px;
+    position:absolute;
+    top:0px;
+    right:-16px;
+}
+/* fin CSS site path */
+
+
+/* CSS notification messages */
+#notifications{
+    position:fixed;
+    top:10px;
+    left:10px;
+    width:300px;
+    z-index:1010;
+}
+
+.message{
+    padding:5px 4px 5px 40px;
+    margin-bottom:10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    position:relative;
+}
+
+.error-message{
+    background-color:#FFFFFF;
+    border:1px solid #B9121B;
+    color:#B9121B;
+}
+
+.error-icon{
+    background:url('../images/icones/icones.png') no-repeat;
+    background-position: -134px 0;
+    width: 32px;
+    height: 32px;
+    position:absolute;
+    left:5px;
+    top:-2px;
+}
+
+.validation-message{
+    background:#FFFFFF;
+    border:1px solid #77ae1b;
+    color:#77ae1b;
+}
+
+.validation-icon{
+    background:url('../images/icones/icones.png') no-repeat;
+    background-position: -169px 0;
+    width: 32px;
+    height: 32px;
+    position:absolute;
+    left:5px;
+    top:-2px;
+}
+
+.info-message{
+    background:#FFFFFF;
+    border:1px solid #3273a8;
+    color:#3273a8;
+}
+
+.info-icon{
+    background:url('../images/icones/icones.png') no-repeat;
+    background-position: -202px 0;
+    width: 32px;
+    height: 32px;
+    position:absolute;
+    left:5px;
+    top:-2px;
+}
+/* fin CSS notifications */
+
+/* CSS pagination */
+.multipage{
+    width:350px;
+    margin:auto;
+}
+
+.multipage button, input, select{
+    float:left;
+    margin-right:4px;
+    font-size:13.3333px
+}
+/* fin CSS pagination */
+
+/* CSS icones bouton */
+.user_icon{
+    background: url('../images/icones/icones.png') no-repeat;
+    background-position: -115px 0;
+    width: 16px;
+    height: 16px;
+    position:absolute;
+    top:3px;
+    left:4px;
+}
+
+.users_icon{
+    background: url('../images/icones/icones.png') no-repeat;
+    background-position: -95px 0;
+    width: 16px;
+    height: 16px;
+    position:absolute;
+    top:3px;
+    left:4px;
+}
+
+.pages_icon{
+    background: url('../images/icones/icones.png') no-repeat;
+    background-position: -76px -19px ;
+    width:16px;
+    height:16px;
+    position:absolute;
+    top:3px;
+    left:4px;
+}
+
+.show_icon{
+    background: url('../images/icones/icones.png') no-repeat;
+    background-position: -18px -39px ;
+    width:16px;
+    height:16px;
+    position:absolute;
+    top:3px;
+    left:4px;
+    padding:0px !important;
+}
+
+.mail_icon{
+    background: url("../images/icones/icones.png") no-repeat -38px -19px;
+    width:16px;
+    height:16px;
+    display:block;
+    float:left;
+    margin:4px;
+}
+
+.password_icon{
+    background: url("../images/icones/icones.png") no-repeat -57px -19px;
+    width:16px;
+    height:16px;
+    display:block;
+    float:left;
+    margin:4px;
+}
+
+.comment_icon{
+    background: url("../images/icones/icones.png") no-repeat -114px -40px;
+    width:16px;
+    height:16px;
+    display:block;
+    float:left;
+    margin:4px;
+}
+
+/* Fin CSS icones bouton */
+
+/* Boutons */
+.hasIcon{
+    padding-left:24px !important;
+}
+
+.boutonI{
+    background: url("../images/menu/menuA2.png") repeat-x;
+    border: 1px #44484c solid;
+    padding:0px 4px 0px 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #dadada;
+    font-family: "Lucida Sans Unicode","Lucida Grande","Arial",sans-serif;
+    font-size: 14px;
+    text-align:center;
+    display:block;
+    text-shadow: 0px 1px 1px #000;
+    cursor: not-allowed;
+}
+/* fin boutons */
+
+/* Barre qui contient les boutons créer objet et retour notamment */
+.top_bottom_btns{
+    margin:10px;
+    clear:both;
+}
+
+
+/* CSS debug infos */
+#debug-infos{
+    border-top:1px solid #FF5900;
+    background-color: rgba(0, 0, 0, 0.9);
+    color:white;
+    font-family:Courier,"MS Courier New",Prestige,"Everson Mono";
+    height:32px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    z-index:9999;
+}
+
+#debug-controls{
+    position:fixed;
+    bottom:1px;
+    left:10px;
+    width:32px;
+    height:32px;
+    opacity:0.7;
+    background-repeat:no-repeat;
+}
+
+#debug-controls:hover{
+    opacity:1;
+}
+
+.debug-up{
+    background: url('../images/icones/icones.png') no-repeat 0 -59px;
+}
+
+.debug-down{
+    background: url('../images/icones/icones.png') no-repeat -38px -60px;
+}
+
+.debug-info{
+    padding:4px 1% 4px 1%;
+}
+
+.debug-title{
+    float:left;
+    width:18%;
+    margin-right:1%;
+    text-align:right;
+}
+
+.debug-message{
+    float:left;
+    width:72%;
+    margin-left:1%;
+}
+
+.debug-time{
+    float:left;
+    margin-left:1%;
+    width: 6%;
+}
+
+.debug-info-first{
+    font-family: Century Gothic,sans-serif;
+    font-size:1.2em;
+    letter-spacing: 0.2em;
+}
+
+.debug-info-last{
+    font-size:1.2em;
+    color:#FF5900;
+}
+
+.debug-info-redirection{
+    border-bottom:1px solid #FF5900;
+    background-color: rgba(255, 89, 0, 0.1);
+}
+/* Fin CSS debug infos */
+
+/* CSS Errors 401, 403, 404, 500 */
+#error{
+    padding:10px;
+    background:url('../images/exclamation.gif') no-repeat center;
+    min-height:500px;
+}
+
+#error h2{
+    margin-top:40px;
+    margin-left:16%;
+    font-size:1.5em;
+    color:#B9121B;
+}
+
+#error_sol{
+    margin-left:18%;
+    font-weight:bold;
+}
+/* Fin CSS errors */
+
+/**
+ * Version mobile CSS
+ * Merci à Alsacréation
+ */
+@media (max-width: 640px) {
+
+ /* passer tous les éléments de largeur fixe en largeur automatique */
+ body, element1, element2 {
+   width: auto;
+   margin: auto;
+   padding: auto;
+ }
+
+ /* fixer une largeur maximale  de 100 % aux éléments potentiellement problématiques */
+ img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
+   max-width: 100%;
+ }
+/* conserver le ratio des images et empêcher les débordements de boîtes dûs aux border ou padding */
+ img {
+   height: auto; width: auto;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+ }
+
+ /* gestion des mots longs */
+ textarea, table, td, th, code, pre, samp {
+   word-wrap: break-word; /* passage à la ligne forcé */
+   -webkit-hyphens: auto; /* césure propre */
+   -moz-hyphens: auto;
+   hyphens: auto;
+ }
+ code, pre, samp {
+   white-space: pre-wrap; /* passage à la ligne spécifique pour les éléments à châsse fixe */
+ }
+
+ /* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+ element1, element2 {
+   float: none !important;
+   width: auto !important
+ }
+
+ /* masquer les éléments superflus */
+ .hide_mobile {
+   display: none !important;
+ }
+
+ /* Un message personnalisé */
+ body:before {
+   content: "Version mobile du site";
+   display: block;
+   color: #777;
+   text-align: center;
+   font-style: italic;
+ }
+}
+
+@media (max-width:640px) and (orientation: landscape) {
+  body {
+   -webkit-text-size-adjust: 70%;
+  }
+}

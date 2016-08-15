@@ -1,0 +1,8 @@
+Attention, si mise à jour ne pas oublier de changer dans config.base.php et config.tinymce.php les données CONFIG_SYS_DEFAULT_PATH et CONFIG_SYS_ROOT_PATH
+
+modifications:
+- ajout de tinymce ajax file & image manager
+- ajout de la langue francaise à ce plugin
+- ajout de la langue francaise à tinymce
+- ajout dans ajaxfilemanager.php d'un test si user connecté
+  pour éviter que n'importe qui n'upload des fichiers

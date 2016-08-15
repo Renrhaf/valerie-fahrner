@@ -1,0 +1,30 @@
+.default_user{
+	background-position: 0 -94px ;
+	width: 230px;
+	height: 230px;
+}
+
+.login{
+	background-position: -58px 0;
+	width: 16px;
+	height: 16px;
+}
+
+.required{
+	background-position: -19px -18px ;
+	width: 16px;
+	height: 16px;
+}
+
+.required_mini{
+	background-position: -98px -44px ;
+	width: 5px;
+	height: 6px;
+}
+
+.valid{
+	background-position: 0 -18px ;
+	width: 16px;
+	height: 16px;
+}
+

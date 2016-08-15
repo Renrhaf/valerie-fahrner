@@ -1,0 +1,72 @@
+/** 
+ *   Feuille des styles css de connection
+ *   Créée le : 5 sept. 2011, 14:02:53
+ *   Autheur : Quentin Fahrner
+ *   Description: Contient les règles de style du formulaire de connection
+ */
+
+#login-embedded {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-color: #ececec;
+    color:#545454;
+    border: 3px solid #525E67;
+    box-shadow: 0 0 20px #000000;
+    left: 50%;
+    margin: -200px;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    width: 400px;
+    z-index: 1002;
+}
+
+#blackout {
+    background-color: #000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#close-login{
+    position:absolute;
+    top:5px;
+    right:5px;
+    width:16px;
+    height:16px;
+    background: url("../images/icones/icones.png") no-repeat;
+    background-position: -37px -38px ;
+    opacity:0.7;
+    cursor:pointer;
+}
+
+#close-login:hover{
+    opacity:1;
+}
+
+#embedded-login .input {
+    width:380px;
+    margin-bottom:15px;
+    font-size: 14px;
+    font-family: "Lucida Sans Unicode","Lucida Grande","Arial",sans-serif;
+}
+
+#TemLog{
+    margin-bottom:10px;
+}
+
+/* methode fond couvrant css2 */
+#backImg{
+    left: 0;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}

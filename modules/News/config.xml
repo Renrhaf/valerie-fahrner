@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <module_name>News</module_name>
+    <author>Quentin Fahrner</author>
+    <date>24/01/2012</date>
+    <thumb_width>100</thumb_width>
+    <thumb_height>100</thumb_height>
+    <thumb_quality>80</thumb_quality>
+    <img_width>800</img_width>
+    <img_height>600</img_height>
+    <img_quality>100</img_quality>
+    <max_file_size>8388608</max_file_size>
+    <img_color_background>FFFFFFF</img_color_background>
+    <file_upload_dir>uploads/images/</file_upload_dir>
+    <keep_original_img>1</keep_original_img>
+</module>

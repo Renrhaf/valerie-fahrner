@@ -1,0 +1,300 @@
+/** 
+ *   Feuille de style principale des textes/titres...
+ *   Créée le : 5 sept. 2011, 14:02:53
+ *   Autheur : Quentin Fahrner
+ *   Description: Contient les règles de style des élements de texte, liens, etc
+ *                Ces tyles sont séparés pour être utilisables dans TinyMCE
+ */
+
+ * {
+    margin:0;
+    padding:0;
+}
+ 
+a {
+    text-decoration: none;
+    color: #316d9f;
+}
+
+h3 {
+    color:#662625;
+    letter-spacing: 0.1em;
+}
+
+h4 {
+    margin:20px 0px 10px 0px;
+    color:#BD8D46;
+}
+
+.page_title{
+    color:#662625;
+    letter-spacing : 0.1em;
+    padding-left:10px;
+}
+
+p {
+    text-align:justify;
+    margin: 8px 0px 8px 0px;
+}
+
+i {
+    color: #333333;
+    font-family: Century Gothic, sans-serif;
+}
+
+blockquote {
+    font-family:Georgia,"Times New Roman",Times,serif;
+    font-style:italic;
+    background: url('../images/icones/right-quote.gif') no-repeat right bottom;
+    text-indent:-25px;
+    padding-right:25px;
+    padding-left:25px;
+    color:brown;
+    text-align:justify;
+    display:inline-block;
+}
+
+blockquote:first-letter {
+    background: url('../images/icones/left-quote.gif') no-repeat left top;
+    padding-left:25px;
+    font-size:1.4em;
+}
+
+blockquote[cite]:after {
+    display: block;
+    text-align: right;
+    content: "\2014\ " attr(cite);
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+address {
+    
+}
+
+pre {
+    
+}
+
+/* Tableaux */
+table {
+    width:100%;
+    border-top:1px solid #e3f1fe;
+    border-right:1px solid #e3f1fe;
+    border-collapse:collapse;
+    font:76%/160% "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+}
+
+table tr {
+    background-color:#FFFFFF;
+}
+
+table tr:hover, tr.odd:hover {
+    background-color:#e9f3fd;
+}
+
+table tr.odd {
+    background-color:#F4F9FE;
+}
+
+table td {
+    color:#678197;
+    border-bottom: 1px solid #e3f1fe;
+    border-left:1px solid #e5eff8;
+    text-align:center;
+}
+
+thead th, thead td {
+    text-align:center;
+    font:bold 1.2em/2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    background:#f4f9fe url("../images/table-background.gif") repeat-x;
+    color: #678197;
+    border-bottom: 1px solid #e3f1fe;
+    border-left:1px solid #e5eff8;
+    padding:.3em 0 0.3em 0;
+}
+/* Fin CSS tableaux */
+
+/* CSS general formulaires */
+.formulaire{
+    margin:10px;
+    padding:30px;
+    padding-bottom:10px;
+    margin-top:20px;
+    clear:both;
+    font-family: "Lucida Sans Unicode","Lucida Grande","Arial",sans-serif;
+    position:relative;
+    border:1px solid black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color:#F1F2F1;
+}
+
+.formulaire h3{
+    position:absolute;
+    top:-15px;
+    left:10px;
+    letter-spacing: 0.1em !important;
+    border:1px solid black;
+    padding:4px !important;
+    background-color:#E7E8E8;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.formulaire label{
+    float:left;
+    width:40%;
+    clear:both;
+    line-height:32px;
+    margin-bottom:10px;
+    font-size:15px;
+    padding-left:10px;
+}
+
+.formulaire label[required=required]{
+    background: url('../images/icones/required_mini.png') no-repeat 0px 6px;
+    color: #B9121B;
+}
+
+.formulaire input[type=text], input[type=password], textarea, .formulaire select, .input, .select{
+    float:left;
+    background: url("../images/input-bg.gif") #FFFFFF repeat-x;
+    border: 1px #C0C0C0 solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 14px;
+    padding: 7px;
+    margin-bottom:10px;
+    width:45%;
+}
+
+.formulaire select{
+    width:46.65% !important;
+}
+
+.formulaire option{
+    padding-left:10px;
+}
+
+.formulaire input[type=text]:focus, input[type=password]:focus, textarea:focus, .formulaire select:focus, .input:focus {
+    background-image:none;
+}
+
+.formulaire input[type=checkbox], .checkbox{
+    float:left;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.formulaire input[type=submit], .submit{
+    float:left;
+    margin-left:40%;
+    border: 1px #44484c solid;
+    background: url("../images/menu/menuA2.png") repeat-x;
+    color: #dadada; 
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    height:35px;
+    padding-left:8px;
+    padding-right:8px;
+    cursor:pointer;
+    clear:both;
+    width:20%;
+    line-height:32px;
+    text-align:center;
+}
+
+.formulaire input[type=submit]:hover, .submit:hover{
+    color:#F6AC00;
+    text-shadow: 0px 1px 1px #000;
+}
+
+.formulaire input[type=reset], .reset{
+    border: 1px #d7d4d4 solid;
+    background: url("../images/menu/menu.png") repeat-x;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    height:35px;
+    padding-left:8px;
+    padding-right:8px;
+    cursor:pointer;
+    float:left;
+    width:18%;
+    line-height:35px;
+    text-align:center;
+    margin-left:6.65%;
+    color:black;
+}
+
+.formulaire input[type=reset]:hover, .reset:hover{
+    color:#F6AC00;
+    text-shadow: 0px 1px 1px #FFF;
+}
+
+.formulaire .input-error{
+    background: url("../images/error-input-bg.gif") #FFFFFF repeat-x !important;
+    color:#B9121B !important;
+}
+/* Fin CSS formulaire */
+
+
+
+/**
+ * Styles mis à disposition de l'utilisateur dans TinyMCE
+ * Attention, ces styles sont aussi utilisés dans le site ailleur
+ * A Rajouter ici uniquement, et modifier le template tinyMCE.tpl
+ */
+ 
+/* Bouton Blanc */
+.boutonW{
+    background: url("../images/menu/menu.png") repeat-x;
+    border: 1px #d7d4d4 solid;
+    padding:0px 4px 0px 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #000000;
+    font-family: "Lucida Sans Unicode","Lucida Grande","Arial",sans-serif;
+    font-size: 14px;
+    cursor:pointer;
+    text-align:center;
+    display:inline-block;
+    position:relative;
+}
+
+.boutonW:hover{
+    color:#F6AC00;
+    text-shadow: 0px 1px 1px #FFF;
+}
+
+/* Bouton Noir */
+.boutonB{
+    background: url("../images/menu/menuA2.png") repeat-x;
+    border: 1px #44484c solid;
+    padding:0px 4px 0px 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #dadada;
+    font-family: "Lucida Sans Unicode","Lucida Grande","Arial",sans-serif;
+    font-size: 14px;
+    cursor:pointer;
+    text-align:center;
+    display:inline-block;
+    text-shadow: 0px 1px 1px #000;
+    position:relative;
+}
+
+.boutonB:hover{
+    color:#F6AC00;
+    text-shadow: 0px 1px 1px #FFFFFFF;
+}

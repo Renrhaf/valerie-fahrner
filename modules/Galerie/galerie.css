@@ -1,0 +1,155 @@
+.galerie{
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:20px;
+    border:1px solid #e5eff8;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -moz-box-shadow: 2px 2px 2px 0px #CCCCCC;
+    -webkit-box-shadow: 2px 2px 2px 0px #CCCCCC;
+    -o-box-shadow: 2px 2px 2px 0px #CCCCCC;
+    box-shadow: 2px 2px 2px 0px #CCCCCC;
+    position:relative;
+    background-color:white;
+    float:left;
+    width:225px;
+    overflow: hidden;
+}
+
+.galerie_head{
+    text-align:left;
+    padding:4px;
+    padding-left:15px;
+    border-bottom: 1px solid #e3f1fe;
+    color: #2C5871;
+    font:bold 1.2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    background:#f4f9fe url("images/galerie_head.gif") repeat-x;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position:relative;
+}
+
+.galerie_desc{
+    margin:0;
+    padding:5px;
+    padding-bottom:10px;
+    padding-left:15px;
+    padding-right:15px;
+    font:1em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    text-align:justify;
+}
+
+.galerie_preview{
+    display:block;
+    margin:auto;
+}
+
+.galerie_footer{
+    -webkit-border-bottom-right-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.galerie_footer span{
+    display:block;
+    text-align:center;
+    padding:4px;
+    font:0.6em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    margin-bottom:5px;
+}
+
+.last-update{
+    display:block;
+    text-align:center;
+    padding:4px;
+    font:0.6em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    margin-bottom:5px;
+}
+
+.galerie_icon{
+    background: url('images/galerie.png') no-repeat;
+    width:16px;
+    height:16px;
+    position:absolute;
+    top:3px;
+    left:4px;
+}
+
+#Gimage_list{
+    list-style:none;
+    width:900px;
+    margin:auto;
+}
+
+#Gimage_list li{
+    display:block;
+    float:left;
+    margin:4px;
+    border: 2px solid #CCCCCC; 
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    position:relative;
+}
+
+#Gimage_list li img{
+    display:block;
+    margin:0; padding:0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.image_hovered{
+    border:2px solid red !important;
+}
+
+#Gimage_list li span{
+    position:absolute;
+    top:-1px;
+    right:-1px;
+    background-color:white;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    opacity:0.6;
+}
+
+#image_desc{
+    width:900px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    position:relative;
+}
+
+#image_desc p{
+    font:1em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    text-align:justify;
+    min-height:1.5em;
+    padding-left:50px;
+    padding-right:50px;
+}
+
+#image_desc h4{
+    font:0.7em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    visibility:hidden;
+    padding-left:50px;
+}
+
+.image_desc{
+    display:none;
+}
+
+.desc_note{
+    font:0.7em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+

@@ -1,0 +1,112 @@
+Options +FollowSymLinks
+Options -Indexes
+AddDefaultCharset UTF-8
+
+################################################################################
+#                           COMPRESSION GZIP                                   #
+################################################################################
+<ifmodule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/x-javascript
+    # Removes some bugs
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</ifmodule>
+
+################################################################################
+#                   MISE EN CACHE NAVIGATEUR                                   #
+################################################################################
+<ifModule mod_headers.c>
+    # Paramètrage de la mise en cache des fichiers
+    Header unset Pragma
+    FileETag None
+    Header unset ETag
+
+    # 1 YEAR
+    <filesMatch "\.(ico|pdf|flv)$">
+        Header set Cache-Control "max-age=29030400, public, must-revalidate"
+    </filesMatch>
+
+    # 1 WEEK
+    <filesMatch "\.(jpg|jpeg|png|gif|swf|css|js)$">
+        Header set Cache-Control "max-age=604800, public, must-revalidate"
+    </filesMatch>
+
+    # 2 DAYS
+    <filesMatch "\.(xml|txt)$">
+        Header set Cache-Control "max-age=172800, proxy-revalidate"
+    </filesMatch>
+
+    # Force no caching for dynamic files
+    <filesMatch "\.(php|cgi|pl|htm)$">
+        Header unset Cache-Control
+        Header unset Expires
+        Header unset Last-Modified
+    </filesMatch>
+</ifModule>
+
+
+################################################################################
+#                           URL REWRITING                                      #
+################################################################################
+# Initialisation
+    RewriteEngine On
+    RewriteBase /
+
+# On force l'utilisation du sous domaine www
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_HOST} !^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+    RewriteCond %{HTTPS} on
+    RewriteCond %{HTTP_HOST} !^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirections permanentes
+    RewriteRule ^contact$ contactez-nous [R=301,L]
+    RewriteRule ^actualites$ news [R=301,L]
+
+# Règles du module Core
+    # Favicon
+    RewriteRule ^favicon\.ico$ core/images/favicon.png
+    RewriteRule ^favicon\.png$ core/images/favicon.png
+
+    # Page de contact
+    RewriteRule ^contactez-nous$ index.php?module=Core&model=Contact&action=Show [L,QSA]
+
+    # Espace personnel
+    RewriteRule ^home$ index.php?module=Core&model=Home&action=Show [L,QSA]
+
+    # Pages du site
+    RewriteRule ^([0-9a-z-]*)\.html$ index.php?module=Core&model=Page&action=Show&uk[0]=uk_page_rewrite_url&uk[1]=$1 [L,QSA]
+
+    # Utilisateur
+    RewriteRule ^user/([0-9]*)/([0-9a-z-]*)$ index.php?model=User&action=Show&pk=$1&urlrwtxt=$2 [L,QSA]
+    RewriteRule ^user/([0-9]*)$ index.php?model=User&action=Show&pk=$1&urlrwtxt= [L,QSA]
+
+# Règles des modules
+    # Galeries
+    RewriteRule ^galeries$ index.php?module=Galerie&model=Galerie&action=Showlist [L,QSA]
+    RewriteRule ^galeries/([0-9]*)/([0-9a-z-]*)$ index.php?module=Galerie&model=Galerie&action=Show&pk=$1&urlrwtxt=$2 [L,QSA]
+    RewriteRule ^galeries/([0-9]*)$ index.php?module=Galerie&model=Galerie&action=Show&pk=$1&urlrwtxt= [L,QSA]
+
+    # Actualités
+    RewriteRule ^news$ index.php?module=News&model=News&action=Showlist [L,QSA]
+    RewriteRule ^news/categ-([0-9]*)/([0-9a-z-]*)$ index.php?module=News&model=News&action=Showlist&news_categ_id=$1&urlrwtxt=$2 [L,QSA]
+    RewriteRule ^news/categ-([0-9]*)$ index.php?module=News&model=News&action=Showlist&news_categ_id=$1&urlrwtxt= [L,QSA]
+    RewriteRule ^news/([0-9]*)/([0-9a-z-]*)$ index.php?module=News&model=News&action=Show&pk=$1&urlrwtxt=$2 [L,QSA]
+    RewriteRule ^news/([0-9]*)$ index.php?module=News&model=News&action=Show&pk=$1&urlrwtxt= [L,QSA]
+
+    RewriteRule ^news/categs$ index.php?module=News&model=Newscateg&action=Showlist [L,QSA]
+    RewriteRule ^news/categs/([0-9]*)/([0-9a-z-]*)$ index.php?module=News&model=Newscateg&action=Show&pk=$1&urlrwtxt=$2 [L,QSA]
+    RewriteRule ^news/categs/([0-9]*)$ index.php?module=News&model=Newscateg&action=Show&pk=$1&urlrwtxt= [L,QSA]
+
+
+
+################################################################################
+#                 PERSONNALISATION PAGES ERREURS                               #
+################################################################################
+ErrorDocument 401 /index.php?model=Error&code=401
+ErrorDocument 403 /index.php?model=Error&code=403
+ErrorDocument 404 /index.php?model=Error&code=404
+ErrorDocument 500 /index.php?model=Error&code=500

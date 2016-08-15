@@ -1,0 +1,265 @@
+/** 
+ *   Feuille de style des styles coté administration
+ *   Créée le : 5 sept. 2011, 14:02:53
+ *   Autheur : Quentin Fahrner
+ *   Description: Contient les règles de style des pages d'administration
+ */
+
+/* Commandes edition/suppression/activation */
+.commands{
+    padding:4px;
+}
+
+.commands a, .commands div{
+    display:block;
+    height:16px;
+    width:16px;
+    float:left;
+    opacity:0.7;
+    margin-right:4px;
+    cursor:pointer;
+}
+
+.commands a:hover, .commands div:hover{
+    opacity:1;
+}
+
+.btn_active{
+    background: url("../images/icones/icones.png") no-repeat;
+    background-position: 0 0;
+    width: 16px;
+    height: 16px;
+}
+
+.btn_busy{
+    background: url("../images/icones/icones.png") no-repeat;
+    background-position: -19px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.btn_delete{
+    background: url("../images/icones/icones.png") no-repeat;
+    background-position: -37px -38px ;
+    width: 16px;
+    height: 16px;
+}
+
+.btn_edit{
+    background: url("../images/icones/icones.png") no-repeat;
+    background-position: 0 -39px ;
+    width: 16px;
+    height: 16px;
+}
+/* Fin CSS commandes */
+
+/* CSS pour les tableaux d'administration */
+.admin_table {
+    width:100%;
+    border-top:1px solid #e3f1fe;
+    border-right:1px solid #e3f1fe;
+    border-collapse:collapse;
+    font:76%/160% "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+}
+
+.admin_table tr {
+    background-color:#FFFFFF;
+}
+
+.admin_table tr.odd {
+    background-color:#F4F9FE;
+}
+
+.admin_table tr:hover {
+    background-color:#e9f3fd;
+}
+
+.admin_table td {
+    color:#678197;
+    border-bottom: 1px solid #e3f1fe;
+    border-left:1px solid #e5eff8;
+    text-align:center;
+}
+
+
+.admin_table thead th {
+    text-align:center;
+    font:bold 1.2em/2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    background:#f4f9fe url("../images/table-background.gif") repeat-x;
+    color: #678197;
+    border-bottom: 1px solid #e3f1fe;
+    border-left:1px solid #e5eff8;
+    padding:.3em 0 0.3em 0;
+}
+
+.admin_table p {
+    padding:4px;
+    text-align:center !important;
+}
+
+.triable {
+   cursor:pointer; 
+}
+
+.admin_table thead th span {
+    display:block;
+    width:16px;
+    height:16px;
+    float:left;
+}
+
+.tri_asc {
+    background: url("../images/icones/icones.png") no-repeat;
+    background-position: -74px -39px ;
+    width: 16px;
+    height: 16px;
+}
+
+.tri_desc {
+    background: url("../images/icones/icones.png") no-repeat;
+    background-position: -55px -39px ;
+    width: 16px;
+    height: 16px;
+}
+/* Fin CSS tableaux admin */
+
+
+/* CSS keywords */
+#autocompleter{
+    position:relative;
+}
+
+#suggestions{
+    position:absolute;
+    top:31px;
+    left:367px;
+    z-index:100;
+    list-style:none;
+    width:428px;
+}
+
+#suggestions li{
+    background: url("../images/input-bg.gif") #FFFFFF repeat-x;
+    border: 1px #C0C0C0 solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 14px;
+    padding: 3px 3px 3px 7px;
+}
+
+#suggestions li:hover{
+    background-image:none;
+    background-color:#CCCCCC;
+    cursor:pointer;
+    padding-left:15px;
+}
+
+#suggestions .s_selected{
+    background-image:none;
+    background-color:#CCCCCC;
+    cursor:pointer;
+    padding-left:15px;
+}
+
+#used_keyword_list{
+    list-style:none;
+}
+
+#used_keyword_list li{
+    padding: 0px 4px 0px 4px;
+    margin-right:10px;
+    border:1px solid #F6AC00;
+    background-color:#FEEFBB;
+    float:left;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom:5px;
+}
+
+#used_keyword_list .uk_selected{
+    border:1px solid #0194F6;
+    background-color:#D1EBFD;
+}
+/* fin CSS keywords */
+
+/* Spécifique TinyMCE */
+.tinyMCE_hidden_textarea {
+    visibility:hidden !important;
+    height:0px !important;
+    margin:0px !important;
+    padding:0px !important;
+    display: block !important;
+}
+
+.mceEditor {
+    width:100% !important;
+    float:left;
+    margin-bottom:10px;
+}
+/* Fin CSS TinyMCE */
+
+
+/* CSS home */
+.home_box{
+    width:47.5%;
+    margin:10px;
+    float: left;
+    border:1px solid #e5eff8;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -moz-box-shadow: 2px 2px 2px 0px #CCCCCC;
+    -webkit-box-shadow: 2px 2px 2px 0px #CCCCCC;
+    -o-box-shadow: 2px 2px 2px 0px #CCCCCC;
+    box-shadow: 2px 2px 2px 0px #CCCCCC;
+}
+
+.home_box_head{
+    text-align:center;
+    padding:4px;
+    border-bottom: 1px solid #e3f1fe;
+    color: #2C5871;
+    font:bold 1.2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    background:#f4f9fe url("core/images/table-background.gif") repeat-x;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+    
+
+.home_box_body{
+    padding:15px;
+    background-color:white;
+    -webkit-border-bottom-right-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.home_box_body ul{
+    list-style:none;
+    margin:4px;
+}
+  
+.home_box_body ul li{
+    margin-bottom:4px;
+}
+
+.uf_label{
+    float:left;
+    width:180px;
+    clear:both;
+}
+
+.uf_val{
+    float:left;
+}
+/* Fin css home */
