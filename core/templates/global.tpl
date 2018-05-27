@@ -1,7 +1,7 @@
 {* Template principal du site web *}
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr" itemscope itemtype="http://data-vocabulary.org/Person">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr" itemscope itemtype="https://data-vocabulary.org/Person">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -19,7 +19,7 @@
     <meta itemprop="role" content="potière/céramiste" />
     <meta itemprop="org" content="Autoentrepreneur" />
     <meta itemprop="adr" content="4 rue de Hilsenheim - 67820 Wittisheim" />
-    <meta itemprop="photo" content="http://valeriefahrner.fr/core/images/valerie_fahrner.jpg" />
+    <meta itemprop="photo" content="https://www.valeriefahrner.fr/core/images/valerie_fahrner.jpg" />
 
     {foreach $config.css as $css} <link type="text/css" rel="stylesheet" media="screen" href="{$css}" /> {/foreach}
     {foreach $config.js as $js} <script type="text/javascript" src="{$js}"></script> {/foreach}
@@ -101,9 +101,10 @@
         
         <div id="socials">
             <!-- Google +1 button -->
-            <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="http://www.valeriefahrner.fr"></div>
+            <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="
+            www.valeriefahrner.fr"></div>
             <div id="fb-root" style="display:none;"></div>
-            <div style="float:right;" class="fb-like" data-href="http://www.valeriefahrner.fr" data-send="false" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="tahoma"></div>
+            <div style="float:right;" class="fb-like" data-href="https://www.valeriefahrner.fr" data-send="false" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="tahoma"></div>
         </div>
         
         <!-- Facebook customer chat code -->
