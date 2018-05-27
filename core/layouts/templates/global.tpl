@@ -19,7 +19,7 @@
     <meta itemprop="role" content="potière/céramiste" />
     <meta itemprop="org" content="Autoentrepreneur" />
     <meta itemprop="adr" content="4 rue de Hilsenheim - 67820 Wittisheim" />
-    <meta itemprop="photo" content="http://valeriefahrner.fr/core/images/valerie_fahrner.jpg" />
+    <meta itemprop="photo" content="https://www.valeriefahrner.fr/core/images/valerie_fahrner.jpg" />
     
     <base href="{$config.realpath}">
 
@@ -47,7 +47,18 @@
     <![endif]-->
 </head>
 
-<body>    
+<body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js#xfbml=1&appId=214591485316350&version=v2.12&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div id="mainWrapper">
         <div id="content">
 
@@ -83,21 +94,22 @@
             </div>
 
             <div id="footer">
-                Copyright - Contenu et images protégés par le droit d'auteur - Réalisation <a rel="nofollow" href="http://www.renrhaf.fr" title="visitez mon site">Quentin Fahrner</a>    
+                Copyright - Contenu et images protégés par le droit d'auteur - Réalisation <a rel="nofollow" href="https://www.renrhaf.fr" title="visitez mon site">Quentin Fahrner</a>
             </div>
         </div>
         
         <div id="socials">
-        <!-- Google +1 button -->
-        <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="http://www.valeriefahrner.fr"></div>
-        <div id="fb-root" style="float:left;"></div>
-        <div style="float:left;" class="fb-like" data-href="https://www.facebook.com/PoterieceramiqueValerieFahrner" data-send="false" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="tahoma"></div>
-        
-        <div style="float:right;">
-            <a href="http://www.w3.org/html/logo/">
-                <img width="80" height="25" src="core/images/html5-badge.png" alt="HTML5 Powered with CSS3 / Styling, Semantics, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Semantics, and Offline &amp; Storage">
-            </a>
+            <!-- Google +1 button -->
+            <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="https://www.valeriefahrner.fr"></div>
+            <div style="float:left;" class="fb-like" data-href="https://www.facebook.com/PoterieceramiqueValerieFahrner" data-send="false" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="tahoma"></div>
         </div>
+
+        <!-- Facebook customer chat code -->
+        <div class="fb-customerchat"
+             attribution="setup_tool"
+             page_id="453907824636236"
+             logged_in_greeting="Bienvenue ! :) Une question sur mes créations, mes formations ?"
+             logged_out_greeting="Bienvenue ! :) Une question sur mes créations, mes formations ?">
         </div>
     </div>    
 

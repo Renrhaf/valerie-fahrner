@@ -101,9 +101,7 @@
         
         <div id="socials">
             <!-- Google +1 button -->
-            <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="
-            www.valeriefahrner.fr"></div>
-            <div id="fb-root" style="display:none;"></div>
+            <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="www.valeriefahrner.fr"></div>
             <div style="float:right;" class="fb-like" data-href="https://www.valeriefahrner.fr" data-send="false" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="tahoma"></div>
         </div>
         

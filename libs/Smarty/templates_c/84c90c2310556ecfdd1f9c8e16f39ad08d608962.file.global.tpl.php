@@ -163,7 +163,7 @@ $_smarty_tpl->tpl_vars['info']->_loop = true;
         
         <div id="socials">
         <!-- Google +1 button -->
-        <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="http://www.valeriefahrner.fr"></div>
+        <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="https://www.valeriefahrner.fr"></div>
         <div id="fb-root" style="float:left;"></div>
         <div style="float:left;" class="fb-like" data-href="https://www.facebook.com/PoterieceramiqueValerieFahrner" data-send="false" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="tahoma"></div>
         
