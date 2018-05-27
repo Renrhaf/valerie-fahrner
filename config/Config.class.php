@@ -18,8 +18,7 @@ class Config{
         $this->load_core_config();
         
         // Chargement des données de l'url
-        $server_protocol = explode('/', $_SERVER['SERVER_PROTOCOL']);
-        $this->config['server_protocol'] = strtolower($server_protocol[0]);		
+        $this->config['server_protocol'] = 'https';		 // Force https now...
         $pos = strrpos($_SERVER['SCRIPT_NAME'] , '/');
         $site_url =  ($pos === false) ? $_SERVER['HTTP_HOST'].'/' : $_SERVER['HTTP_HOST'].substr($_SERVER['SCRIPT_NAME'], 0 , $pos+1);
         $this->config['realpath'] = $this->config['server_protocol'].'://'.$site_url;
