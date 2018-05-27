@@ -37,15 +37,6 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
         })();
 
-        // facebook like button
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&amp;appId=214591485316350";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk')); 
-
         // google analytics
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-22877755-2']);
@@ -61,6 +52,16 @@
 </head>
 
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js#xfbml=1&appId=214591485316350&version=v2.12&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
     <div id="mainWrapper">
         <div id="content">
 
@@ -99,10 +100,18 @@
         </div>
         
         <div id="socials">
-        <!-- Google +1 button -->
-        <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="http://www.valeriefahrner.fr"></div>
-        <div id="fb-root" style="display:none;"></div>
-        <div style="float:right;" class="fb-like" data-href="http://www.valeriefahrner.fr" data-send="false" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="tahoma"></div>
+            <!-- Google +1 button -->
+            <div style="float:left;" class="g-plusone" data-annotation="inline" data-width="250" data-href="http://www.valeriefahrner.fr"></div>
+            <div id="fb-root" style="display:none;"></div>
+            <div style="float:right;" class="fb-like" data-href="http://www.valeriefahrner.fr" data-send="false" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="tahoma"></div>
+        </div>
+        
+        <!-- Facebook customer chat code -->
+        <div class="fb-customerchat"
+          attribution="setup_tool"
+          page_id="453907824636236"
+          logged_in_greeting="Bienvenue ! :) Une question sur mes créations, mes formations ?"
+          logged_out_greeting="Bienvenue ! :) Une question sur mes créations, mes formations ?">
         </div>
     </div>    
 
